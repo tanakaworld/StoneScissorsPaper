@@ -38,14 +38,13 @@ UIImage *paperImage;
         case 1:
             enemyHandImage.image = scissorsImage;
             messageLabel.text = @"あなたの勝ち！";
-            stoneButton.hidden = YES;
+            stoneButton.enabled = NO;
             retryButton.hidden = NO;
             break;
         case 2:
             enemyHandImage.image = paperImage;
             messageLabel.text = @"あなたの負け　。。。";
-            scissorsButton.hidden = YES;
-            stoneButton.hidden = YES;
+            stoneButton.enabled = NO;
             retryButton.hidden = NO;
             break;
     }
@@ -64,21 +63,20 @@ UIImage *paperImage;
         case 0:
             enemyHandImage.image =  scissorsImage;
             messageLabel.text = @"あいこで";
-            scissorsButton.hidden = NO;
             paperButton.hidden = NO;
+            stoneButton.hidden = NO;
             retryButton.hidden = YES;
             break;
         case 1:
             enemyHandImage.image =  paperImage;
             messageLabel.text = @"あなたの勝ち！";
-            stoneButton.hidden = YES;
+            scissorsButton.enabled = NO;
             retryButton.hidden = NO;
             break;
         case 2:
             enemyHandImage.image =  stoneImage;
             messageLabel.text = @"あなたの負け　。。。";
-            scissorsButton.hidden = YES;
-            stoneButton.hidden = YES;
+            scissorsButton.enabled = NO;
             retryButton.hidden = NO;
             break;
     }
@@ -94,26 +92,22 @@ UIImage *paperImage;
     
     switch (result) {
         case 0:
-            // チョキの画像
             enemyHandImage.image =  paperImage;
             messageLabel.text = @"あいこで";
-            
-            // ボタン表示切り替え
             scissorsButton.hidden = NO;
-            paperButton.hidden = NO;
+            stoneButton.hidden = NO;
             retryButton.hidden = YES;
             break;
         case 1:
             enemyHandImage.image =  stoneImage;
             messageLabel.text = @"あなたの勝ち！";
-            stoneButton.hidden = YES;
+            paperButton.enabled = NO;
             retryButton.hidden = NO;
             break;
         case 2:
             enemyHandImage.image =  scissorsImage;
             messageLabel.text = @"あなたの負け　。。。";
-            scissorsButton.hidden = YES;
-            stoneButton.hidden = YES;
+            paperButton.enabled = NO;
             retryButton.hidden = NO;
             break;
     }
@@ -126,6 +120,10 @@ UIImage *paperImage;
     messageLabel.text = @"ゲーム開始！　じゃんけん ...";
     [enemyHandImage setImage:nil];
     retryButton.hidden = YES;
+    
+    stoneButton.enabled = YES;
+    scissorsButton.enabled = YES;
+    paperButton.enabled = YES;
 }
 
 
