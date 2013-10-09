@@ -17,19 +17,13 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Szy-UO-YKh">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6I-hX-eW3">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NKT-k9-N7D">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="89" id="bCh-zU-3e1"/>
+                                    <constraint firstAttribute="width" constant="90" id="rp4-NT-dpm"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Stone">
+                                <state key="normal" title="Stone" image="stone.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -37,12 +31,12 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="stone_btn_down:" destination="2" eventType="touchUpInside" id="Elg-vk-Ike"/>
+                                    <action selector="btn_stone_down:" destination="2" eventType="touchUpInside" id="sL1-hG-vhF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tjy-t2-TzR">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Scissors">
+                                <state key="normal" title="Scissors" image="scissors.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -50,12 +44,15 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="scissors_btn_down:" destination="2" eventType="touchUpInside" id="Qlp-5z-RSc"/>
+                                    <action selector="btn_scissors_down:" destination="2" eventType="touchUpInside" id="vWU-QB-QMW"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="odO-rs-Uuj">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="R3e-8c-UaN"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Paper">
+                                <state key="normal" title="Paper" image="paper.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -63,7 +60,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="paper_btn_down:" destination="2" eventType="touchUpInside" id="ALZ-EU-ZH1"/>
+                                    <action selector="btn_paper_down:" destination="2" eventType="touchUpInside" id="gCu-7m-NXD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xih-EO-2uf">
@@ -76,42 +73,53 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="retry_btn_down:" destination="2" eventType="touchUpInside" id="0iT-UD-K31"/>
+                                    <action selector="btn_retry_down:" destination="2" eventType="touchUpInside" id="nVT-3w-IMg"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b3P-1n-b78">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="PBr-lq-LlD"/>
+                                    <constraint firstAttribute="height" constant="90" id="Q3d-vw-0aQ"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="odO-rs-Uuj" secondAttribute="trailing" constant="19" id="5Ig-Bx-xzK"/>
+                            <constraint firstItem="YVQ-Hn-dQb" firstAttribute="centerX" secondItem="b3P-1n-b78" secondAttribute="centerX" type="default" id="1ha-M5-oND"/>
+                            <constraint firstItem="odO-rs-Uuj" firstAttribute="bottom" secondItem="tjy-t2-TzR" secondAttribute="bottom" type="default" id="8JV-RM-0IN"/>
+                            <constraint firstAttribute="bottom" secondItem="xih-EO-2uf" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="ASA-jk-Xxn"/>
+                            <constraint firstItem="tjy-t2-TzR" firstAttribute="top" secondItem="odO-rs-Uuj" secondAttribute="top" type="default" id="Bqn-5c-RmE"/>
                             <constraint firstItem="NKT-k9-N7D" firstAttribute="top" secondItem="3" secondAttribute="top" constant="252" id="DHv-aj-6DN"/>
-                            <constraint firstItem="xih-EO-2uf" firstAttribute="leading" secondItem="tjy-t2-TzR" secondAttribute="leading" type="default" id="FwK-t0-gFV"/>
-                            <constraint firstItem="c6I-hX-eW3" firstAttribute="leading" secondItem="Szy-UO-YKh" secondAttribute="leading" type="default" id="Iga-Lx-BHR"/>
-                            <constraint firstItem="tjy-t2-TzR" firstAttribute="centerX" secondItem="c6I-hX-eW3" secondAttribute="centerX" type="default" id="NFF-1w-jhy"/>
-                            <constraint firstItem="odO-rs-Uuj" firstAttribute="baseline" secondItem="tjy-t2-TzR" secondAttribute="baseline" type="default" id="NIf-sf-Hle"/>
-                            <constraint firstItem="YVQ-Hn-dQb" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="32" id="Of6-xE-3bl"/>
-                            <constraint firstItem="xih-EO-2uf" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="PP4-CX-dxn"/>
-                            <constraint firstItem="c6I-hX-eW3" firstAttribute="top" secondItem="3" secondAttribute="top" constant="137" id="Vk0-6X-xwX"/>
-                            <constraint firstItem="NKT-k9-N7D" firstAttribute="leading" secondItem="YVQ-Hn-dQb" secondAttribute="leading" type="default" id="Z0r-sW-D9d"/>
-                            <constraint firstItem="Szy-UO-YKh" firstAttribute="top" secondItem="3" secondAttribute="top" constant="72" id="fQH-ok-byo"/>
-                            <constraint firstItem="tjy-t2-TzR" firstAttribute="baseline" secondItem="NKT-k9-N7D" secondAttribute="baseline" type="default" id="klK-bn-30s"/>
-                            <constraint firstItem="YVQ-Hn-dQb" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="q1u-CN-Qj6"/>
-                            <constraint firstAttribute="bottom" secondItem="xih-EO-2uf" secondAttribute="bottom" constant="114" id="wfa-l7-tmJ"/>
+                            <constraint firstItem="YVQ-Hn-dQb" firstAttribute="top" secondItem="3" secondAttribute="top" constant="50" id="HNF-4t-3F7"/>
+                            <constraint firstItem="xih-EO-2uf" firstAttribute="centerX" secondItem="tjy-t2-TzR" secondAttribute="centerX" type="default" id="Ijt-um-QRx"/>
+                            <constraint firstItem="tjy-t2-TzR" firstAttribute="top" secondItem="NKT-k9-N7D" secondAttribute="top" type="default" id="M0a-UV-d7L"/>
+                            <constraint firstItem="b3P-1n-b78" firstAttribute="trailing" secondItem="tjy-t2-TzR" secondAttribute="trailing" type="default" id="UjN-dk-CjO"/>
+                            <constraint firstItem="NKT-k9-N7D" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="VT5-tt-1ub"/>
+                            <constraint firstItem="b3P-1n-b78" firstAttribute="top" secondItem="3" secondAttribute="top" constant="108" id="Yil-eF-1AF"/>
+                            <constraint firstItem="xih-EO-2uf" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="aUk-Vb-v2t"/>
+                            <constraint firstAttribute="trailing" secondItem="odO-rs-Uuj" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="bAW-3O-RNo"/>
+                            <constraint firstItem="b3P-1n-b78" firstAttribute="leading" secondItem="tjy-t2-TzR" secondAttribute="leading" type="default" id="bQh-HR-noz"/>
+                            <constraint firstItem="tjy-t2-TzR" firstAttribute="bottom" secondItem="NKT-k9-N7D" secondAttribute="bottom" type="default" id="pCz-nQ-7pN"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="btn_paper" destination="odO-rs-Uuj" id="uxR-5x-JzW"/>
-                        <outlet property="btn_retry" destination="xih-EO-2uf" id="PBP-dm-Zme"/>
-                        <outlet property="btn_scissors" destination="tjy-t2-TzR" id="hXy-t5-YqM"/>
-                        <outlet property="btn_stone" destination="NKT-k9-N7D" id="Idk-n7-dgF"/>
-                        <outlet property="lbl_enemy" destination="Szy-UO-YKh" id="JxP-C8-eBB"/>
-                        <outlet property="lbl_msg" destination="YVQ-Hn-dQb" id="18E-8O-7zS"/>
-                        <outlet property="lbl_result" destination="c6I-hX-eW3" id="bi8-3d-8m2"/>
+                        <outlet property="enemyHandImage" destination="b3P-1n-b78" id="ItR-dl-HRn"/>
+                        <outlet property="messageLabel" destination="YVQ-Hn-dQb" id="cV5-HB-PfJ"/>
+                        <outlet property="paperButton" destination="odO-rs-Uuj" id="Qau-83-SUl"/>
+                        <outlet property="retryButton" destination="xih-EO-2uf" id="ubz-TX-16S"/>
+                        <outlet property="scissorsButton" destination="tjy-t2-TzR" id="puW-Oo-nSX"/>
+                        <outlet property="stoneButton" destination="NKT-k9-N7D" id="sxO-Y7-oYZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="paper.png" width="108" height="103"/>
+        <image name="scissors.png" width="108" height="103"/>
+        <image name="stone.png" width="108" height="103"/>
+    </resources>
     <classes>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
@@ -119,17 +127,16 @@
         <class className="ViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
             <relationships>
-                <relationship kind="action" name="paper_btn_down:"/>
-                <relationship kind="action" name="retry_btn_down:"/>
-                <relationship kind="action" name="scissors_btn_down:"/>
-                <relationship kind="action" name="stone_btn_down:"/>
-                <relationship kind="outlet" name="btn_paper" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="btn_retry" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="btn_scissors" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="btn_stone" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="lbl_enemy" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lbl_msg" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lbl_result" candidateClass="UILabel"/>
+                <relationship kind="action" name="btn_paper_down:"/>
+                <relationship kind="action" name="btn_retry_down:"/>
+                <relationship kind="action" name="btn_scissors_down:"/>
+                <relationship kind="action" name="btn_stone_down:"/>
+                <relationship kind="outlet" name="enemyHandImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="messageLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="paperButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="retryButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="scissorsButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="stoneButton" candidateClass="UIButton"/>
             </relationships>
         </class>
     </classes>

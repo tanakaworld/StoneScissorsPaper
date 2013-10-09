@@ -10,18 +10,19 @@
 
 @interface ViewController : UIViewController {
     
-    IBOutlet UIButton *btn_stone;
-    IBOutlet UIButton *btn_scissors;
-    IBOutlet UIButton *btn_paper;
-    IBOutlet UIButton *btn_retry;
-    IBOutlet UILabel *lbl_msg;
-    IBOutlet UILabel *lbl_result;
-    IBOutlet UILabel *lbl_enemy;
+    IBOutlet UIButton *stoneButton;
+    IBOutlet UIButton *scissorsButton;
+    IBOutlet UIButton *paperButton;
+    IBOutlet UIButton *retryButton;
+    IBOutlet UILabel *messageLabel;
+    IBOutlet UIImageView *enemyHandImage;
+    
+    
 }
 
--(IBAction)stone_btn_down:(id)sender;
--(IBAction)scissors_btn_down:(id)sender;
--(IBAction)paper_btn_down:(id)sender;
--(IBAction)retry_btn_down:(id)sender;
+-(IBAction)btn_stone_down:(id)sender;
+-(IBAction)btn_scissors_down:(id)sender;
+-(IBAction)btn_paper_down:(id)sender;
+-(IBAction)btn_retry_down:(id)sender;
 
 @end

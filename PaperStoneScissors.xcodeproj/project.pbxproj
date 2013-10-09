@@ -24,6 +24,9 @@
 		29D0520018056C9500867A01 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29D051D818056C9500867A01 /* Foundation.framework */; };
 		29D0520818056C9500867A01 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 29D0520618056C9500867A01 /* InfoPlist.strings */; };
 		29D0520B18056C9500867A01 /* PaperStoneScissorsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D0520A18056C9500867A01 /* PaperStoneScissorsTests.m */; };
+		29D0521918057F1300867A01 /* paper.png in Resources */ = {isa = PBXBuildFile; fileRef = 29D0521618057F1300867A01 /* paper.png */; };
+		29D0521A18057F1300867A01 /* scissors.png in Resources */ = {isa = PBXBuildFile; fileRef = 29D0521718057F1300867A01 /* scissors.png */; };
+		29D0521B18057F1300867A01 /* stone.png in Resources */ = {isa = PBXBuildFile; fileRef = 29D0521818057F1300867A01 /* stone.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,9 @@
 		29D0520718056C9500867A01 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		29D0520918056C9500867A01 /* PaperStoneScissorsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaperStoneScissorsTests.h; sourceTree = "<group>"; };
 		29D0520A18056C9500867A01 /* PaperStoneScissorsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaperStoneScissorsTests.m; sourceTree = "<group>"; };
+		29D0521618057F1300867A01 /* paper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = paper.png; sourceTree = "<group>"; };
+		29D0521718057F1300867A01 /* scissors.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scissors.png; sourceTree = "<group>"; };
+		29D0521818057F1300867A01 /* stone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stone.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +139,7 @@
 		29D051DD18056C9500867A01 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				29D0521418057EDC00867A01 /* hands */,
 				29D051DE18056C9500867A01 /* PaperStoneScissors-Info.plist */,
 				29D051DF18056C9500867A01 /* InfoPlist.strings */,
 				29D051E218056C9500867A01 /* main.m */,
@@ -161,6 +168,16 @@
 				29D0520618056C9500867A01 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		29D0521418057EDC00867A01 /* hands */ = {
+			isa = PBXGroup;
+			children = (
+				29D0521618057F1300867A01 /* paper.png */,
+				29D0521718057F1300867A01 /* scissors.png */,
+				29D0521818057F1300867A01 /* stone.png */,
+			);
+			name = hands;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +257,9 @@
 				29D051ED18056C9500867A01 /* Default-568h@2x.png in Resources */,
 				29D051F018056C9500867A01 /* MainStoryboard_iPhone.storyboard in Resources */,
 				29D051F318056C9500867A01 /* MainStoryboard_iPad.storyboard in Resources */,
+				29D0521918057F1300867A01 /* paper.png in Resources */,
+				29D0521A18057F1300867A01 /* scissors.png in Resources */,
+				29D0521B18057F1300867A01 /* stone.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
